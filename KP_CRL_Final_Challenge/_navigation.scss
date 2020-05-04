@@ -1,0 +1,121 @@
+/* ** NAVIGATION ** */
+.nav {
+   visibility: hidden;
+   height: 0;
+   width: 100%;
+   position: absolute;
+
+   &--visible {
+      visibility: visible;
+      height: auto;
+      position: relative;
+   }
+
+   width: 100%;
+   font-size: 1rem;
+   padding: 0.5em 0;
+
+   &__item {
+      margin: 1em;
+   }
+
+   &__list {
+      margin: 3em 0;
+      padding: 0;
+      list-style: none;
+   }
+
+   &__link {
+      font-family: "Oswald", sans-serif;
+      color: $text-color--light;
+      text-decoration: none;
+      text-transform: uppercase;
+
+      &:hover,
+      &:focus {
+         color: darken($text-color--light, 25%);
+      }
+      &:active {
+         color: $text-color--light;
+      }
+
+      &.button {
+         &:hover,
+         &:focus {
+            color: $text-color--light;
+         }
+      }
+   }
+
+   &-toggle {
+      cursor: pointer;
+      border: 0;
+      width: 3em;
+      height: 3em;
+      padding: 0em;
+      border-radius: 50%;
+      background: #072a2d;
+      color: white;
+      transition: opacity 250ms ease;
+
+      position: absolute;
+      left: 0;
+
+      &:focus,
+      &:hover {
+         opacity: 0.75;
+      }
+   }
+}
+
+.hamburger {
+   width: 50%;
+   position: relative;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+   display: block;
+   margin: 0 auto;
+   height: 3px;
+   background: white;
+}
+
+.hamburger::before,
+.hamburger::after {
+   content: "";
+   width: 100%;
+}
+
+.hamburger::before {
+   transform: translateY(-6px);
+}
+
+.hamburger::after {
+   transform: translateY(3px);
+}
+
+.logo {
+   height: 30px;
+   align-self: center;
+}
+
+@media (min-width: 1000px) {
+   .nav {
+      display: flex;
+      justify-content: flex-end;
+      visibility: visible;
+      height: auto;
+      position: relative;
+
+      &__list {
+         display: flex;
+         margin: 0 0 0 30px;
+      }
+
+      &-toggle {
+         display: none;
+      }
+   }
+}

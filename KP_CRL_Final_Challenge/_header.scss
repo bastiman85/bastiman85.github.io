@@ -1,0 +1,11 @@
+/* ** HEADER ** */
+header {
+   background-color: $clr--darker;
+   color: $text-color--light;
+   padding: 1em 0;
+   text-align: center;
+
+   @media (min-width: 1000px) {
+      padding: 0;
+   }
+}
