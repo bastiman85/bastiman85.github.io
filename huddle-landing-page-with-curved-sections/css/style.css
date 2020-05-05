@@ -286,6 +286,10 @@ body > img {
   margin-bottom: -5px;
 }
 
+.footer__top-image {
+  margin-bottom: -6px;
+}
+
 @media (max-width: 700px) {
   .desktop {
     display: none;
