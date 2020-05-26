@@ -15,30 +15,114 @@
             My projects
          </h1>
       </header>
-      <main class="main">
+      <main class="main" id="portfolio">
          <div class="container">
             <div class="row">
                <div class="col">
-                  <h3>
-                     Kevin Powell - Conquering Responsive Layouts
-                  </h3>
+                  <div class="block-title">
+                     <h3>
+                        Kevin Powell - Conquering Responsive Layouts
+                     </h3>
+                  </div>
+                  <!-- block-title -->
+                  <div class="projects single">
+                     <div class="project">
+                        <div class="thumb">
+                           <img src="images/CRL-final_thumb.png" alt="" />
+                           <a href="#CRL-final">
+                              <div class="thumb-overlay">
+                                 <span class="fas fa-eye"></span>
+                              </div>
+                              <!-- thumb-overlay -->
+                           </a>
+                        </div>
+                        <!-- thumb -->
+                        <a class="project-link" href="KP_CRL_Final_Challenge/index.html" target="_blank">
+                           CRL Final Challenge
+                        </a>
+                     </div>
+                     <!-- project -->
+                  </div>
+                  <!-- projects -->
+               </div>
+               <!-- col -->
 
+               <div class="col">
+                  <div class="block-title">
+                     <h3>
+                        Frontend mentor
+                     </h3>
+                  </div>
+                  <!-- block-title -->
+                  <div class="projects single">
+                     <div class="project">
+                        <div class="thumb">
+                           <img src="images/huddle_thumb.png" alt="" />
+                           <a href="#huddle">
+                              <div class="thumb-overlay">
+                                 <span class="fas fa-eye"></span>
+                              </div>
+                              <!-- thumb-overlay -->
+                           </a>
+                        </div>
+                        <!-- thumb -->
+                        <a class="project-link" href="huddle-landing-page-with-curved-sections/index.html" target="_blank">
+                           Huddle landing page - Curved sections
+                        </a>
+                     </div>
+                     <!-- project -->
+                  </div>
+                  <!-- projects -->
+               </div>
+               <!-- col -->
+            </div>
+            <!-- row -->
+
+            <!-- ligthboxes -->
+
+            <div class="portfolio-lightbox" id="CRL-final">
+               <div class="portfolio-lightbox__content">
+                  <a href="#portfolio" class="close"></a>
+                  <div class="portfolio-lightbox__image-box">
+                     <div>
+                        <h4 class="image-title">Desktop</h4>
+                        <img class="portfolio-lightbox__image desktop" src="images/CRL-full.png" alt="" />
+                     </div>
+                     <div>
+                        <h4 class="image-title">Mobile</h4>
+                        <img class="portfolio-lightbox__image mobile" src="images/CRL-mobile.png" alt="" />
+                     </div>
+                  </div>
                   <a class="project-link" href="KP_CRL_Final_Challenge/index.html" target="_blank">
                      CRL Final Challenge
                   </a>
                </div>
+               <!-- portfolio-lightbox__content -->
+            </div>
+            <!-- portfolio-lightbox -->
 
-               <div class="col">
-                  <h3>
-                     Frontend mentor
-                  </h3>
-
+            <div class="portfolio-lightbox" id="huddle">
+               <div class="portfolio-lightbox__content">
+                  <a href="#portfolio" class="close"></a>
+                  <div class="portfolio-lightbox__image-box">
+                     <div>
+                        <h4 class="image-title desktop">Desktop</h4>
+                        <img class="portfolio-lightbox__image desktop" src="images/huddle-full.png" alt="" />
+                     </div>
+                     <div>
+                        <h4 class="image-title mobile">Mobile</h4>
+                        <img class="portfolio-lightbox__image mobile" src="images/huddle-mobile.png" alt="" />
+                     </div>
+                  </div>
                   <a class="project-link" href="huddle-landing-page-with-curved-sections/index.html" target="_blank">
                      Huddle landing page - Curved sections
                   </a>
                </div>
+               <!-- portfolio-lightbox__content -->
             </div>
+            <!-- portfolio-lightbox -->
          </div>
+         <!-- container -->
       </main>
    </body>
 </html>
