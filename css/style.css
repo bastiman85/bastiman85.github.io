@@ -87,8 +87,8 @@ header {
 }
 
 .main .thumb-overlay span {
-  visibility: hidden;
   color: #d86c00;
+  opacity: 0.3;
 }
 
 .main .thumb-overlay:focus, .main .thumb-overlay:hover {
@@ -155,7 +155,7 @@ header {
   overflow-y: scroll;
 }
 
-.main .portfolio__lightbox__image {
+.main .portfolio-lightbox__image {
   margin-bottom: 1em;
 }
 
@@ -225,6 +225,14 @@ header {
     -ms-grid-columns: (minmax(200px, 1fr))[2];
         grid-template-columns: repeat(2, minmax(200px, 1fr));
     grid-gap: 1em;
+  }
+}
+
+@media (min-width: 800px) {
+  .main .thumb-overlay span {
+    visibility: hidden;
+    color: #d86c00;
+    opacity: 1;
   }
 }
 
