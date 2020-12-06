@@ -389,7 +389,7 @@ h2 {
   padding: 2rem;
   border-radius: 1rem;
   margin: 2rem;
-  background-image: url(/img/bg-pattern-mobile.svg);
+  background-image: url("/FAQ-accordion-card/img/bg-pattern-mobile.svg");
   background-size: calc(100% - 8rem);
   background-repeat: no-repeat;
   background-position: center top;
@@ -412,7 +412,7 @@ h2 {
 
 @media (min-width: 55em) {
   .container {
-    background-image: url(/img/bg-pattern-desktop.svg);
+    background-image: url("/FAQ-accordion-card/img/bg-pattern-desktop.svg");
     background-size: 860px;
     background-repeat: no-repeat;
     background-position: left -475px bottom -112px;
@@ -431,7 +431,7 @@ h2 {
             transform: translateX(-5rem);
   }
   .faq::before {
-    content: url("/img/illustration-box-desktop.svg");
+    content: url("/FAQ-accordion-card/img/illustration-box-desktop.svg");
     position: absolute;
     bottom: 134px;
     left: -61px;
@@ -488,7 +488,7 @@ h2 {
 
 .faq__content label::after {
   display: inline-block;
-  content: url("/img/icon-arrow-down.svg");
+  content: url("/FAQ-accordion-card/img/icon-arrow-down.svg");
   position: absolute;
   right: 10px;
   top: 2px;
