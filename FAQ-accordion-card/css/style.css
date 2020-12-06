@@ -1,0 +1,510 @@
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: var(--clr-bg);
+}
+
+.attribution a {
+  color: var(--clr-text-accent);
+}
+
+/* ** TABLE OF CONTENT ** */
+/* ********************** */
+/* ** RESETS           ** */
+/* ** COMPONENTS       ** */
+/* ** DARKMODE         ** */
+/* ** HEADER           ** */
+/* ** NAVIGATION       ** */
+/* ** GENERAL STYLING  ** */
+/* ** FOOTER           ** */
+/* ********************** */
+:root {
+  --clr-bg: white;
+  --clr-text-primary: hsl(238, 29%, 16%);
+  --clr-text-accent: hsl(14, 88%, 65%);
+  --clr-grad1: hsl(273, 75%, 66%);
+  --clr-grad2: hsl(240, 73%, 65%);
+  --clr-neutral-100: hsl(237, 12%, 33%);
+  --clr-neutral-400: hsl(240, 6%, 50%);
+  --clr-neutral-900: hsl(240, 5%, 91%);
+  --ff-base: "Kumbh Sans", sans-serif;
+  --fw-normal: 400;
+  --fw-bold: 700;
+  --spacer: 1rem;
+}
+
+[data-theme="dark"] {
+  --clr-bg: #222;
+  --clr-text-primary: #eee;
+  --clr-text-accent: hsl(14, 88%, 65%);
+  --clr-grad1: hsl(273, 75%, 66%);
+  --clr-grad2: hsl(240, 73%, 65%);
+  --clr-neutral-100: #aaa;
+  --clr-neutral-400: hsl(240, 14%, 83%);
+  --clr-neutral-900: hsl(240, 5%, 91%);
+}
+
+/* ** RESET ** */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* 
+ * USAGE: Add role="list" to lists that doesn't look like lists. 
+ * Remove padding on a per-context basis.
+ * Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed
+ */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+:-webkit-any-link {
+  color: inherit;
+}
+
+:-moz-any-link {
+  color: inherit;
+}
+
+:any-link {
+  color: inherit;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  border: 0;
+}
+
+/* Restore address element to have normal font-style */
+address {
+  font-style: normal;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Cred: Andy Bell @hankchizljaw https://github.com/hankchizljaw/modern-css-reset */
+/* ** COMPONENTS ** */
+.skip-link {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
+}
+
+.skip-link:focus {
+  background-color: #f1f1f1;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+          box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+  clip: auto !important;
+  -webkit-clip-path: none;
+          clip-path: none;
+  color: black;
+  display: block;
+  font-size: 0.875rem;
+  font-size: 14px;
+  font-weight: bold;
+  height: auto;
+  left: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000;
+}
+
+.container {
+  margin: 0 auto;
+}
+
+.flow-content > * + * {
+  margin-top: var(--flow-space, var(--spacer));
+}
+
+.flow-content--large {
+  --flow-space: 2rem;
+}
+
+.flow-content--x-large {
+  --flow-space: 2.5rem;
+}
+
+.center {
+  text-align: center;
+}
+
+.right {
+  text-align: right;
+  margin-right: 30px;
+}
+
+.btn {
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+  background-color: red;
+  color: white;
+}
+
+.btn:hover, .btn:focus {
+  background-color: rgba(255, 0, 0, 0.5);
+  -webkit-box-shadow: 0px 10px 38px 0px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 10px 38px 0px rgba(0, 0, 0, 0.5);
+}
+
+.btn:active {
+  -webkit-box-shadow: inset 0px 10px 38px -10px rgba(0, 0, 0, 0.5);
+          box-shadow: inset 0px 10px 38px -10px rgba(0, 0, 0, 0.5);
+}
+
+.split {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media (min-width: 55em) {
+  .split {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .split > * {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+  .split > * + * {
+    margin: 0 0 0 var(--gap, var(--spacer));
+  }
+}
+
+@media (max-width: 55em) {
+  .split {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .split > * + * {
+    margin: calc(var(--spacer) * 2) 0 0 0;
+  }
+}
+
+/* ** DARKMODE ** */
+.theme-switch-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.theme-switch-wrapper em {
+  margin-left: 10px;
+  font-size: 1rem;
+  color: var(--clr-bg);
+}
+
+.theme-switch {
+  display: inline-block;
+  height: 34px;
+  position: relative;
+  width: 60px;
+  -webkit-transform: scale(0.6);
+          transform: scale(0.6);
+}
+
+.theme-switch input {
+  display: none;
+}
+
+.slider {
+  background-color: #ccc;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  background-color: #fff;
+  bottom: 4px;
+  content: "";
+  height: 26px;
+  left: 4px;
+  position: absolute;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  width: 26px;
+}
+
+input:checked + .slider {
+  background-color: #66bb6a;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+          transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.dm {
+  display: none;
+}
+
+[data-theme="dark"] .dm {
+  display: block;
+}
+
+[data-theme="dark"] .lm {
+  display: none;
+}
+
+/* ** HEADER ** */
+/* ** NAVIGATION ** */
+/* ** GENERAL STYLING ** */
+body {
+  font-family: var(--ff-base);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(var(--clr-grad1)), to(var(--clr-grad2)));
+  background-image: linear-gradient(var(--clr-grad1), var(--clr-grad2));
+  color: var(--clr-neutral-400);
+  font-size: 0.75rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+h2 {
+  color: var(--clr-text-primary);
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 1em;
+}
+
+.faq__content label {
+  color: var(--clr-neutral-100);
+}
+
+.faq {
+  margin: 0 auto;
+  position: relative;
+}
+
+.container {
+  background: var(--clr-bg);
+  padding: 2rem;
+  border-radius: 1rem;
+  margin: 2rem;
+  background-image: url(/img/bg-pattern-mobile.svg);
+  background-size: calc(100% - 8rem);
+  background-repeat: no-repeat;
+  background-position: center top;
+  max-width: 317px;
+}
+
+.img-box {
+  margin-top: -45%;
+}
+
+.img-box img {
+  width: calc(100% - 4rem);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.desktop {
+  display: none;
+}
+
+@media (min-width: 55em) {
+  .container {
+    background-image: url(/img/bg-pattern-desktop.svg);
+    background-size: 860px;
+    background-repeat: no-repeat;
+    background-position: left -475px bottom -112px;
+    max-width: 822px;
+    overflow: hidden;
+  }
+  .img-box {
+    margin-top: auto;
+  }
+  .img-box img {
+    width: calc(100% + 5rem);
+    max-width: unset;
+    margin-bottom: 50px;
+    padding-right: 1rem;
+    -webkit-transform: translateX(-5rem);
+            transform: translateX(-5rem);
+  }
+  .faq::before {
+    content: url("/img/illustration-box-desktop.svg");
+    position: absolute;
+    bottom: 134px;
+    left: -61px;
+    z-index: 1;
+  }
+  h2 {
+    text-align: left;
+  }
+  .desktop {
+    display: block;
+  }
+  .mobile {
+    display: none;
+  }
+}
+
+.faq__content input {
+  display: none;
+}
+
+.faq__content label {
+  display: block;
+  margin: 0 0 1em 0;
+  cursor: pointer;
+  border-bottom: 1px solid var(--clr-neutral-900);
+  line-height: 3;
+  position: relative;
+  padding-right: 3em;
+}
+
+.faq__content label:hover,
+.faq__content label:focus {
+  color: var(--clr-text-accent);
+}
+
+.faq__content input + label + .content {
+  opacity: 0;
+  max-height: 0;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.faq__content input:checked + label + .content {
+  max-height: 800px;
+  opacity: 1;
+  height: auto;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.faq__content input:checked + label {
+  font-weight: var(--fw-bold);
+}
+
+.faq__content label::after {
+  display: inline-block;
+  content: url("/img/icon-arrow-down.svg");
+  position: absolute;
+  right: 10px;
+  top: 2px;
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+  transition: -webkit-transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+}
+
+.faq__content input:checked + label::after {
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+  -webkit-transition: -webkit-transform 0.25s ease-in-out;
+  transition: -webkit-transform 0.25s ease-in-out;
+  transition: transform 0.25s ease-in-out;
+  transition: transform 0.25s ease-in-out, -webkit-transform 0.25s ease-in-out;
+}
+
+/* ** FOOTER ** */

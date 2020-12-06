@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="initial-scale=1, viewport-fit=cover" />
+      <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" />
+      <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet" />
+      <link rel="stylesheet" href="css/style.css" />
+      <title>Frontend Mentor | FAQ Accordion Card</title>
+   </head>
+
+   <body>
+      <!-- <a class="skip-link" href="#content">Hoppa till innehåll</a> -->
+      <div class="theme-switch-wrapper">
+         <label class="theme-switch" for="checkbox">
+            <input type="checkbox" id="checkbox" />
+            <div class="slider round"></div>
+         </label>
+         <em>Dark Mode</em>
+      </div>
+
+      <section class="faq">
+         <div class="container split">
+            <div class="img-box">
+               <div class="lm">
+                  <img class="mobile" src="/img/illustration-woman-online-mobile.svg" alt="" />
+                  <img class="desktop" src="/img/illustration-woman-online-desktop.svg" alt="" />
+               </div>
+               <div class="dm">
+                  <img class="mobile" src="/img/illustration-woman-online-mobile-dm.svg" alt="" />
+                  <img class="desktop" src="/img/illustration-woman-online-desktop-dm.svg" alt="" />
+               </div>
+            </div>
+
+            <div id="#content" class="faq__content">
+               <h2 class="section-title">FAQ</h2>
+               <input id="q1" type="checkbox" />
+               <label for="q1">How many team members can I invite?</label>
+               <div class="content">
+                  <p>You can invite up to 2 additional users on the Free plan. There is no limit on team members for the Premium plan.</p>
+               </div>
+
+               <input id="q2" type="checkbox" />
+               <label for="q2">What is the maximum file upload size?</label>
+               <div class="content">
+                  <p>No more than 2GB. All files in your account must fit your allotted storage space.</p>
+               </div>
+
+               <input id="q3" type="checkbox" />
+               <label for="q3">How do I reset my password?</label>
+               <div class="content">
+                  <p>Click “Forgot password” from the login page or “Change password” from your profile page. A reset link will be emailed to you.</p>
+               </div>
+
+               <input id="q4" type="checkbox" />
+               <label for="q4">Can I cancel my subscription?</label>
+               <div class="content">
+                  <p>Yes! Send us a message and we’ll process your request no questions asked.</p>
+               </div>
+
+               <input id="q5" type="checkbox" />
+               <label for="q5">Do you provide additional support?</label>
+               <div class="content">
+                  <p>Chat and email support is available 24/7. Phone lines are open during normal business hours.</p>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <div class="attribution">Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="https://linktr.ee/SebastianS">Sebastian Söderström</a>.</div>
+      <script src="js/darkmode.js"></script>
+   </body>
+</html>
