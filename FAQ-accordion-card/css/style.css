@@ -13,10 +13,7 @@
 /* ** RESETS           ** */
 /* ** COMPONENTS       ** */
 /* ** DARKMODE         ** */
-/* ** HEADER           ** */
-/* ** NAVIGATION       ** */
 /* ** GENERAL STYLING  ** */
-/* ** FOOTER           ** */
 /* ********************** */
 :root {
   --clr-bg: white;
@@ -33,7 +30,7 @@
   --spacer: 1rem;
 }
 
-[data-theme="dark"] {
+[data-theme=dark] {
   --clr-bg: #222;
   --clr-text-primary: #eee;
   --clr-text-accent: hsl(14, 88%, 65%);
@@ -67,16 +64,6 @@ dd {
   margin: 0;
 }
 
-/* 
- * USAGE: Add role="list" to lists that doesn't look like lists. 
- * Remove padding on a per-context basis.
- * Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed
- */
-ul[role="list"],
-ol[role="list"] {
-  list-style: none;
-}
-
 /* Set core root defaults */
 html {
   scroll-behavior: smooth;
@@ -91,7 +78,8 @@ body {
 
 /* A elements that don't have a class get default styles */
 a:not([class]) {
-  text-decoration-skip-ink: auto;
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
 }
 
 :-webkit-any-link {
@@ -121,20 +109,11 @@ select {
   font: inherit;
 }
 
-button {
-  border: 0;
-}
-
-/* Restore address element to have normal font-style */
-address {
-  font-style: normal;
-}
-
 /* Remove all animations and transitions for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
   *,
-  *::before,
-  *::after {
+*::before,
+*::after {
     -webkit-animation-duration: 0.01ms !important;
             animation-duration: 0.01ms !important;
     -webkit-animation-iteration-count: 1 !important;
@@ -144,88 +123,10 @@ address {
     scroll-behavior: auto !important;
   }
 }
-
 /* Cred: Andy Bell @hankchizljaw https://github.com/hankchizljaw/modern-css-reset */
 /* ** COMPONENTS ** */
-.skip-link {
-  border: 0;
-  clip: rect(1px, 1px, 1px, 1px);
-  -webkit-clip-path: inset(50%);
-          clip-path: inset(50%);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute !important;
-  width: 1px;
-  word-wrap: normal !important;
-}
-
-.skip-link:focus {
-  background-color: #f1f1f1;
-  border-radius: 3px;
-  -webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
-          box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
-  clip: auto !important;
-  -webkit-clip-path: none;
-          clip-path: none;
-  color: black;
-  display: block;
-  font-size: 0.875rem;
-  font-size: 14px;
-  font-weight: bold;
-  height: auto;
-  left: 5px;
-  line-height: normal;
-  padding: 15px 23px 14px;
-  text-decoration: none;
-  top: 5px;
-  width: auto;
-  z-index: 100000;
-}
-
 .container {
   margin: 0 auto;
-}
-
-.flow-content > * + * {
-  margin-top: var(--flow-space, var(--spacer));
-}
-
-.flow-content--large {
-  --flow-space: 2rem;
-}
-
-.flow-content--x-large {
-  --flow-space: 2.5rem;
-}
-
-.center {
-  text-align: center;
-}
-
-.right {
-  text-align: right;
-  margin-right: 30px;
-}
-
-.btn {
-  cursor: pointer;
-  display: inline-block;
-  text-decoration: none;
-  background-color: red;
-  color: white;
-}
-
-.btn:hover, .btn:focus {
-  background-color: rgba(255, 0, 0, 0.5);
-  -webkit-box-shadow: 0px 10px 38px 0px rgba(0, 0, 0, 0.5);
-          box-shadow: 0px 10px 38px 0px rgba(0, 0, 0, 0.5);
-}
-
-.btn:active {
-  -webkit-box-shadow: inset 0px 10px 38px -10px rgba(0, 0, 0, 0.5);
-          box-shadow: inset 0px 10px 38px -10px rgba(0, 0, 0, 0.5);
 }
 
 .split {
@@ -237,34 +138,35 @@ address {
           justify-content: space-between;
 }
 
-@media (min-width: 55em) {
+@media (min-width: 58en) {
   .split {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
   }
+
   .split > * {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
   }
+
   .split > * + * {
     margin: 0 0 0 var(--gap, var(--spacer));
   }
 }
-
-@media (max-width: 55em) {
+@media (max-width: 58en) {
   .split {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
+
   .split > * + * {
     margin: calc(var(--spacer) * 2) 0 0 0;
   }
 }
-
 /* ** DARKMODE ** */
 .theme-switch-wrapper {
   display: -webkit-box;
@@ -274,7 +176,6 @@ address {
       -ms-flex-align: center;
           align-items: center;
 }
-
 .theme-switch-wrapper em {
   margin-left: 10px;
   font-size: 1rem;
@@ -339,16 +240,14 @@ input:checked + .slider:before {
   display: none;
 }
 
-[data-theme="dark"] .dm {
+[data-theme=dark] .dm {
   display: block;
 }
 
-[data-theme="dark"] .lm {
+[data-theme=dark] .lm {
   display: none;
 }
 
-/* ** HEADER ** */
-/* ** NAVIGATION ** */
 /* ** GENERAL STYLING ** */
 body {
   font-family: var(--ff-base);
@@ -410,7 +309,7 @@ h2 {
   display: none;
 }
 
-@media (min-width: 55em) {
+@media (min-width: 58en) {
   .container {
     background-image: url("/FAQ-accordion-card/img/bg-pattern-desktop.svg");
     background-size: 860px;
@@ -419,9 +318,11 @@ h2 {
     max-width: 822px;
     overflow: hidden;
   }
+
   .img-box {
     margin-top: auto;
   }
+
   .img-box img {
     width: calc(100% + 5rem);
     max-width: unset;
@@ -430,6 +331,7 @@ h2 {
     -webkit-transform: translateX(-5rem);
             transform: translateX(-5rem);
   }
+
   .faq::before {
     content: url("/FAQ-accordion-card/img/illustration-box-desktop.svg");
     position: absolute;
@@ -437,21 +339,22 @@ h2 {
     left: -61px;
     z-index: 1;
   }
+
   h2 {
     text-align: left;
   }
+
   .desktop {
     display: block;
   }
+
   .mobile {
     display: none;
   }
 }
-
 .faq__content input {
   display: none;
 }
-
 .faq__content label {
   display: block;
   margin: 0 0 1em 0;
@@ -461,19 +364,16 @@ h2 {
   position: relative;
   padding-right: 3em;
 }
-
 .faq__content label:hover,
 .faq__content label:focus {
   color: var(--clr-text-accent);
 }
-
 .faq__content input + label + .content {
   opacity: 0;
   max-height: 0;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
-
 .faq__content input:checked + label + .content {
   max-height: 800px;
   opacity: 1;
@@ -481,11 +381,9 @@ h2 {
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
-
 .faq__content input:checked + label {
   font-weight: var(--fw-bold);
 }
-
 .faq__content label::after {
   display: inline-block;
   content: url("/FAQ-accordion-card/img/icon-arrow-down.svg");
@@ -497,7 +395,6 @@ h2 {
   transition: transform 0.5s ease-in-out;
   transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
 }
-
 .faq__content input:checked + label::after {
   -webkit-transform: rotate(-180deg);
           transform: rotate(-180deg);
@@ -506,5 +403,3 @@ h2 {
   transition: transform 0.25s ease-in-out;
   transition: transform 0.25s ease-in-out, -webkit-transform 0.25s ease-in-out;
 }
-
-/* ** FOOTER ** */
