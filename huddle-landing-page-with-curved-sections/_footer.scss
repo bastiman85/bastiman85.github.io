@@ -1,0 +1,147 @@
+/* ** SECTION FOOTER ** */
+
+$desktop: 1000px;
+
+.footer {
+   background-color: $clr-dark;
+   color: white;
+   font-weight: 600;
+   padding-top: 4em;
+   padding-bottom: 2em;
+
+   .row {
+      display: flex;
+      flex-direction: column;
+
+      @media (min-width: $desktop) {
+         flex-direction: row;
+         justify-content: space-between;
+         font-size: 0.7rem;
+      }
+   }
+
+   @media (min-width: $desktop) {
+      .col {
+         width: 40%;
+         min-width: 240px;
+         max-width: 400px;
+      }
+   }
+
+   .form {
+      order: -1;
+      margin-bottom: 5rem;
+
+      @media (min-width: $desktop) {
+         order: 0;
+         max-width: 45%;
+         margin-bottom: 1rem;
+      }
+
+      h3 {
+         text-transform: uppercase;
+         margin-top: 15px;
+         margin-bottom: 15px;
+      }
+
+      label {
+         visibility: hidden;
+         width: 0;
+         display: inline-block;
+      }
+
+      p {
+         max-width: 75%;
+      }
+   }
+
+   input[type="text"] {
+      width: 100%;
+      font-size: 1.4rem;
+      height: 2.7em;
+      margin-right: 1em;
+      padding: 1em;
+      border-radius: 5px;
+
+      @media (min-width: $desktop) {
+         width: calc(100% - 134px);
+         font-size: 0.8rem;
+      }
+   }
+   button {
+      font-size: 1.4rem;
+      // height: 2.5em;
+      margin-top: 0.5em;
+      // margin-bottom: 0.5em;
+      // margin-left: auto;
+      padding: 0.65em 1.8em;
+      background-color: $clr-primary;
+      color: white;
+      letter-spacing: 1px;
+      border: none;
+      float: right;
+      clear: both;
+      border-radius: 5px;
+
+      @media (min-width: $desktop) {
+         margin: 0;
+         font-size: 0.8rem;
+         margin-left: auto;
+         margin-top: -4px;
+         float: none;
+      }
+
+      &:hover,
+      &:focus {
+         box-shadow: inset 5px 5px 5px -5px rgba(0, 0, 0, 0.75);
+      }
+   }
+
+   p {
+      font-weight: 600;
+      margin-bottom: 1.5em;
+   }
+
+   a {
+      display: inline-block;
+      color: currentColor;
+      text-decoration: none;
+      margin: 0.5em 0;
+      font-style: normal;
+      font-weight: 400;
+
+      &::before {
+         width: 1em;
+         height: 1em;
+         margin-right: 1.5em;
+      }
+   }
+
+   .phone::before {
+      content: url("..//images/icon-phone.svg");
+   }
+
+   .email::before {
+      content: url("..//images/icon-email.svg");
+   }
+}
+
+.logo--white {
+   color: white;
+   fill: currentColor;
+   width: 240px;
+   height: 39px;
+}
+
+.social {
+   &-link {
+      display: inline-block;
+      color: currentColor;
+      font-family: FontAwesome;
+      font-size: 1.4rem;
+      text-decoration: none;
+      letter-spacing: 1em;
+   }
+}
+
+// input[type="submit"]

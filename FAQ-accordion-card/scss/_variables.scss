@@ -1,0 +1,27 @@
+// ** VARIABLES ** //
+:root {
+   --clr-bg: white;
+   --clr-text-primary: hsl(238, 29%, 16%);
+   --clr-text-accent: hsl(14, 88%, 65%);
+   --clr-grad1: hsl(273, 75%, 66%);
+   --clr-grad2: hsl(240, 73%, 65%);
+   --clr-neutral-100: hsl(237, 12%, 33%);
+   --clr-neutral-400: hsl(240, 6%, 50%);
+   --clr-neutral-900: hsl(240, 5%, 91%);
+
+   --ff-base: "Kumbh Sans", sans-serif;
+   --fw-normal: 400;
+   --fw-bold: 700;
+   --spacer: 1rem;
+}
+
+[data-theme="dark"] {
+   --clr-bg: #222;
+   --clr-text-primary: #eee;
+   --clr-text-accent: hsl(14, 88%, 65%);
+   --clr-grad1: hsl(273, 75%, 66%);
+   --clr-grad2: hsl(240, 73%, 65%);
+   --clr-neutral-100: #aaa;
+   --clr-neutral-400: hsl(240, 14%, 83%);
+   --clr-neutral-900: hsl(240, 5%, 91%);
+}

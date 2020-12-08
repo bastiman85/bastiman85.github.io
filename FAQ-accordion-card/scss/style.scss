@@ -1,0 +1,23 @@
+.attribution {
+   font-size: 11px;
+   text-align: center;
+   color: var(--clr-bg);
+}
+.attribution a {
+   color: var(--clr-text-accent);
+}
+
+/* ** TABLE OF CONTENT ** */
+/* ********************** */
+// ** VARIABLES        ** //
+/* ** RESETS           ** */
+/* ** COMPONENTS       ** */
+/* ** DARKMODE         ** */
+/* ** GENERAL STYLING  ** */
+/* ********************** */
+
+@import "variables";
+@import "reset";
+@import "components";
+@import "darkmode";
+@import "general";

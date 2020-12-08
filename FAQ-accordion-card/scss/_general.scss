@@ -1,0 +1,150 @@
+/* ** GENERAL STYLING ** */
+body {
+   font-family: var(--ff-base);
+   background-image: linear-gradient(var(--clr-grad1), var(--clr-grad2));
+   color: var(--clr-neutral-400);
+   font-size: 0.75rem;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+}
+
+h2 {
+   color: var(--clr-text-primary);
+   font-size: 2rem;
+   text-align: center;
+   margin-top: 1em;
+}
+
+.faq__content label {
+   color: var(--clr-neutral-100);
+}
+
+.faq {
+   margin: 0 auto;
+   // max-width: 80%;
+   position: relative;
+}
+
+.container {
+   background: var(--clr-bg);
+   padding: 2rem;
+   border-radius: 1rem;
+   margin: 2rem;
+   background-image: url("/FAQ-accordion-card/img/bg-pattern-mobile.svg");
+   background-size: calc(100% - 8rem);
+   background-repeat: no-repeat;
+   background-position: center top;
+   max-width: 317px;
+}
+
+.img-box {
+   margin-top: -45%;
+}
+.img-box img {
+   width: calc(100% - 4rem);
+   margin-left: auto;
+   margin-right: auto;
+}
+
+.desktop {
+   display: none;
+}
+
+@media (min-width: 58en) {
+   .container {
+      background-image: url("/FAQ-accordion-card/img/bg-pattern-desktop.svg");
+      background-size: 860px;
+      background-repeat: no-repeat;
+      background-position: left -475px bottom -112px;
+      max-width: 822px;
+      overflow: hidden;
+   }
+
+   .img-box {
+      margin-top: auto;
+   }
+
+   .img-box img {
+      width: calc(100% + 5rem);
+      max-width: unset;
+      margin-bottom: 50px;
+      padding-right: 1rem;
+      transform: translateX(-5rem);
+   }
+
+   .faq::before {
+      content: url("/FAQ-accordion-card/img/illustration-box-desktop.svg");
+      position: absolute;
+      bottom: 134px;
+      left: -61px;
+      z-index: 1;
+   }
+
+   h2 {
+      text-align: left;
+   }
+
+   .desktop {
+      display: block;
+   }
+
+   .mobile {
+      display: none;
+   }
+}
+
+// Accordion
+
+.faq__content {
+   input {
+      display: none;
+   }
+
+   label {
+      display: block;
+      margin: 0 0 1em 0;
+      cursor: pointer;
+      border-bottom: 1px solid var(--clr-neutral-900);
+      line-height: 3;
+      position: relative;
+      padding-right: 3em;
+   }
+
+   label:hover,
+   label:focus {
+      color: var(--clr-text-accent);
+   }
+
+   input + label + .content {
+      // display: none;
+      opacity: 0;
+      max-height: 0;
+      transition: all 0.5s ease-in-out;
+   }
+
+   input:checked + label + .content {
+      // display: block;
+      max-height: 800px;
+      opacity: 1;
+      height: auto;
+
+      transition: all 0.5s ease-in-out;
+   }
+   input:checked + label {
+      font-weight: var(--fw-bold);
+   }
+   label::after {
+      display: inline-block;
+      content: url("/FAQ-accordion-card/img/icon-arrow-down.svg");
+      position: absolute;
+      right: 10px;
+      top: 2px;
+      transition: transform 0.5s ease-in-out;
+   }
+
+   input:checked + label::after {
+      transform: rotate(-180deg);
+      transition: transform 0.25s ease-in-out;
+   }
+}

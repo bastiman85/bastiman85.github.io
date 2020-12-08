@@ -1,0 +1,29 @@
+/* ** HEADER ** */
+header {
+   .container {
+      margin: 30px auto;
+      width: 85%;
+   }
+
+   .row {
+      display: flex;
+      justify-content: space-between;
+   }
+}
+
+.logo {
+   height: 1.3rem;
+}
+
+.btn--secondary {
+   color: $clr-primary;
+   border-radius: 10em;
+   padding: 0.5em 1.5em;
+   border: 1px solid $clr-primary;
+   box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.75);
+
+   &:hover,
+   &:focus {
+      box-shadow: inset 2px 4px 5px -5px rgba(0, 0, 0, 0.75);
+   }
+}

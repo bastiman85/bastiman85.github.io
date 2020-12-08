@@ -1,0 +1,87 @@
+/* ** SECTION CTA ** */
+section .btn--primary {
+   background-color: $clr-primary;
+   color: white;
+   border-radius: 10em;
+   padding: 0.8em 3em;
+   box-shadow: 0px 5px 8px -5px rgba(0, 0, 0, 0.75);
+   font-weight: 700;
+
+   &:hover,
+   &:focus {
+      box-shadow: inset 2px 4px 5px -5px rgba(0, 0, 0, 0.75);
+   }
+}
+
+.subtitle {
+   max-width: 460px;
+   margin: 30px auto;
+}
+
+.section-one img {
+   margin: 6rem 0;
+}
+
+.section-five {
+   margin-bottom: 15rem;
+
+   @media (min-width: 700px) {
+      margin-top: 4rem;
+      margin-bottom: 8rem;
+   }
+}
+
+.statistics {
+   font-weight: 700;
+
+   @media (min-width: 700px) {
+      &.row {
+         display: flex;
+         justify-content: space-around;
+      }
+   }
+
+   .communities {
+      font-size: 5rem;
+      position: relative;
+      margin-top: 4rem;
+
+      .stats::before {
+         content: url("..//images/icon-communities.svg");
+         position: absolute;
+         transform: scale(0.8) translateY(-1.2em);
+      }
+   }
+
+   .messages {
+      font-size: 4.2rem;
+      position: relative;
+      margin-top: 8rem;
+
+      @media (min-width: 700px) {
+         font-size: 5rem;
+         margin-top: 4rem;
+      }
+
+      .stats::before {
+         content: url("..//images/icon-messages.svg");
+         position: absolute;
+         transform: scale(0.7) translateY(-1.2em);
+      }
+   }
+
+   .stats__image {
+      position: absolute;
+      height: 0.45em;
+      top: -130px;
+      left: 74px;
+   }
+
+   .stats__text {
+      color: lighten(black, 50%);
+      font-size: 0.22em;
+      font-weight: 300;
+      letter-spacing: 1px;
+      margin-top: 1rem;
+   }
+}

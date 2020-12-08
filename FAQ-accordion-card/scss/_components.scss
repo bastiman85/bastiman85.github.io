@@ -1,0 +1,36 @@
+/* ** COMPONENTS ** */
+
+.container {
+   // width: 80%;
+   // max-width: 1200px;
+   margin: 0 auto;
+}
+
+.split {
+   display: flex;
+   justify-content: space-between;
+}
+
+@media (min-width: 58en) {
+   .split {
+      flex-direction: row;
+   }
+
+   .split > * {
+      flex-basis: 100%;
+   }
+
+   .split > * + * {
+      margin: 0 0 0 var(--gap, var(--spacer));
+   }
+}
+
+@media (max-width: 58en) {
+   .split {
+      flex-direction: column;
+   }
+
+   .split > * + * {
+      margin: calc(var(--spacer) * 2) 0 0 0;
+   }
+}
