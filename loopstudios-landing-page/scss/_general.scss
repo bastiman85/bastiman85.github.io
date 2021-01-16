@@ -59,7 +59,7 @@ a:focus:after {
 }
 
 section {
-   margin: 4rem 0;
+   margin: 10rem 0;
 }
 
 .grid {
@@ -96,7 +96,7 @@ section {
 
    h2 {
       font-size: 1.5rem;
-      color: var(--clr-300);
+      color: var(--clr-900);
       margin-bottom: 1em;
       @media (min-width: 56em) {
          font-size: 2.1rem;
@@ -105,6 +105,7 @@ section {
 
    p {
       font-size: 0.75rem;
+      line-height: 1.8;
    }
 }
 
