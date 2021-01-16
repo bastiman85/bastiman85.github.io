@@ -308,7 +308,7 @@ a[target=_blank]::after {
 }
 /* ** HEADER ** */
 .hero {
-  background-image: var(--gradient3), url("../img/mobile/image-hero.jpg");
+  background-image: url("../img/mobile/image-hero.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top center;
@@ -316,6 +316,16 @@ a[target=_blank]::after {
   min-height: 100vh;
   display: flex;
   align-items: center;
+  position: relative;
+}
+.hero .hero:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 100%;
+  background-image: var(--gradient3);
 }
 @media (min-width: 56em) {
   .hero {
