@@ -1,0 +1,40 @@
+/* ** HEADER ** */
+.hero {
+   background-image: var(--gradient3), url("../img/mobile/image-hero.jpg");
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: top center;
+   color: var(--clr-100);
+   min-height: 100vh;
+   display: flex;
+   align-items: center;
+
+   @media (min-width: 800px) {
+      min-height: 0;
+      display: block;
+      padding-bottom: 2em;
+   }
+
+   .container {
+      width: 100%;
+      margin: auto 2rem;
+
+      @media (min-width: 800px) {
+         width: 90%;
+         margin: 0 auto;
+      }
+   }
+
+   @media (min-width: 800px) {
+      background-image: var(--gradient3), url("../img/desktop/image-hero.jpg");
+   }
+}
+
+.hero__content-box {
+   border: 2px solid white;
+   padding: 1.3em;
+   max-width: 350px;
+   @media (min-width: 800px) {
+      margin: 3em 0;
+   }
+}
