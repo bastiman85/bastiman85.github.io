@@ -308,7 +308,7 @@ a[target=_blank]::after {
 }
 /* ** HEADER ** */
 .hero {
-  background-image: var(--gradient3), url("/loopstudios-landing-page/img/mobile/image-hero.jpg");
+  background-image: var(--gradient3), url("../img/mobile/image-hero.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top center;
@@ -336,7 +336,7 @@ a[target=_blank]::after {
 }
 @media (min-width: 56em) {
   .hero {
-    background-image: var(--gradient3), url("/loopstudios-landing-page/img/desktop/image-hero.jpg");
+    background-image: var(--gradient3), url("../img/desktop/image-hero.jpg");
   }
 }
 
