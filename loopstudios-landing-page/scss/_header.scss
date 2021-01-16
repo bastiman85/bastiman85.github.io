@@ -25,11 +25,11 @@
       display: block;
       padding-bottom: 2em;
    }
-
-   .hero__headline {
-      font-size: 3.8em;
+   @media (min-width: 56em) {
+      .hero__headline {
+         font-size: 3.8em;
+      }
    }
-
    .container {
       width: 100%;
       margin: auto 2rem;
@@ -48,10 +48,11 @@
 .hero__content-box {
    border: 2px solid white;
    padding: 1.3em;
-   max-width: 500px;
+   max-width: 350px;
    position: relative;
    z-index: 2;
    @media (min-width: 56em) {
       margin: 6rem 0;
+      max-width: 500px;
    }
 }

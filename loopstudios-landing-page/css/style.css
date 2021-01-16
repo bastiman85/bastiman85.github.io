@@ -334,8 +334,10 @@ a[target=_blank]::after {
     padding-bottom: 2em;
   }
 }
-.hero .hero__headline {
-  font-size: 3.8em;
+@media (min-width: 56em) {
+  .hero .hero__headline {
+    font-size: 3.8em;
+  }
 }
 .hero .container {
   width: 100%;
@@ -356,13 +358,14 @@ a[target=_blank]::after {
 .hero__content-box {
   border: 2px solid white;
   padding: 1.3em;
-  max-width: 500px;
+  max-width: 350px;
   position: relative;
   z-index: 2;
 }
 @media (min-width: 56em) {
   .hero__content-box {
     margin: 6rem 0;
+    max-width: 500px;
   }
 }
 
