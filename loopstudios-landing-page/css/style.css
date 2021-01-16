@@ -572,7 +572,12 @@ a:focus:after {
 }
 
 section {
-  margin: 8rem 0;
+  margin: 5rem 0 2em;
+}
+@media (min-width: 56em) {
+  section {
+    margin: 8rem 0;
+  }
 }
 
 .grid {
@@ -587,6 +592,7 @@ section {
 
 .subhero__image {
   grid-column: 1/-1;
+  margin: 0 auto;
 }
 @media (min-width: 56em) {
   .subhero__image {
