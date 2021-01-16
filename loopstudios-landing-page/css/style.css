@@ -346,7 +346,7 @@ a[target=_blank]::after {
 }
 @media (min-width: 56em) {
   .hero {
-    background-image: var(--gradient3), url("../img/desktop/image-hero.jpg");
+    background-image: url("../img/desktop/image-hero.jpg");
   }
 }
 
