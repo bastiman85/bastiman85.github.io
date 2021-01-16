@@ -350,7 +350,6 @@ a[target=_blank]::after {
 @media (min-width: 56em) {
   .hero {
     background-image: url("../img/desktop/image-hero.jpg");
-    background-size: 80%;
   }
 }
 
