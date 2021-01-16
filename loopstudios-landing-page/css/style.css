@@ -397,8 +397,6 @@ a[target=_blank]::after {
 .hero .nav-list {
   display: flex;
   flex-direction: column;
-  grid-gap: 1em 0;
-  gap: 1em 0;
   font-family: var(--ff-accent);
   font-size: 2rem;
   font-weight: var(--fw-accent);
