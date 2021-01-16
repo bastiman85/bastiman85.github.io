@@ -317,7 +317,7 @@ a[target=_blank]::after {
   display: flex;
   align-items: center;
 }
-@media (min-width: 800px) {
+@media (min-width: 56em) {
   .hero {
     min-height: 0;
     display: block;
@@ -328,13 +328,13 @@ a[target=_blank]::after {
   width: 100%;
   margin: auto 2rem;
 }
-@media (min-width: 800px) {
+@media (min-width: 56em) {
   .hero .container {
     width: 90%;
     margin: 0 auto;
   }
 }
-@media (min-width: 800px) {
+@media (min-width: 56em) {
   .hero {
     background-image: var(--gradient3), url("../img/desktop/image-hero.jpg");
   }
@@ -345,14 +345,14 @@ a[target=_blank]::after {
   padding: 1.3em;
   max-width: 350px;
 }
-@media (min-width: 800px) {
+@media (min-width: 56em) {
   .hero__content-box {
     margin: 3em 0;
   }
 }
 
 /* ** NAVIGATION ** */
-@media (min-width: 800px) {
+@media (min-width: 56em) {
   .header__nav {
     display: flex;
     justify-content: space-between;
@@ -369,9 +369,8 @@ a[target=_blank]::after {
   display: flex;
   align-items: center;
   transform: translateX(100vw);
-  transition: transform 250ms ease-in-out;
 }
-@media (min-width: 800px) {
+@media (min-width: 56em) {
   .hero nav {
     position: static;
     background-color: unset;
@@ -394,7 +393,7 @@ a[target=_blank]::after {
   text-transform: uppercase;
   margin-top: 3em;
 }
-@media (min-width: 800px) {
+@media (min-width: 56em) {
   .hero .nav-list {
     flex-direction: row;
     font-size: 0.8rem;
@@ -415,7 +414,7 @@ a[target=_blank]::after {
   left: 2rem;
   z-index: 10;
 }
-@media (min-width: 800px) {
+@media (min-width: 56em) {
   .hero .logo {
     position: static;
     margin: 1em 0;
@@ -427,7 +426,7 @@ a[target=_blank]::after {
   right: 2em;
   top: 2.5em;
 }
-@media (min-width: 800px) {
+@media (min-width: 56em) {
   .close {
     display: none;
   }
@@ -438,16 +437,58 @@ a[target=_blank]::after {
   right: 2em;
   top: 2.5em;
 }
-@media (min-width: 800px) {
+@media (min-width: 56em) {
   .hamburger {
     display: none;
   }
 }
 
-.hero .nav--visible {
-  transform: translateX(0);
-}
+@media (max-width: 56em) {
+  .hero .nav--visible {
+    animation-name: showNav;
+    animation-duration: 250ms;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+  }
 
+  .hero .nav {
+    display: none;
+    visibility: hidden;
+  }
+
+  .hero .nav--hidden {
+    animation-name: hideNav;
+    animation-duration: 250ms;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+  }
+}
+@keyframes showNav {
+  0% {
+    transform: translateX(100vw);
+  }
+  1% {
+    display: flex;
+    visibility: visible;
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes hideNav {
+  0% {
+    transform: translateX(0);
+  }
+  99% {
+    transform: translateX(100vw);
+  }
+  100% {
+    display: none;
+    visibility: hidden;
+  }
+}
 /* ** GENERAL STYLING ** */
 body {
   overflow-x: hidden;
@@ -526,7 +567,7 @@ section {
 .subhero__image {
   grid-column: 1/-1;
 }
-@media (min-width: 800px) {
+@media (min-width: 56em) {
   .subhero__image {
     grid-column: 1/5;
     grid-row: 1/2;
@@ -539,7 +580,7 @@ section {
   padding-top: 1em;
   text-align: center;
 }
-@media (min-width: 800px) {
+@media (min-width: 56em) {
   .subhero__textbox {
     margin-top: auto;
     margin-bottom: -1px;
@@ -554,7 +595,7 @@ section {
   color: var(--clr-300);
   margin-bottom: 1em;
 }
-@media (min-width: 800px) {
+@media (min-width: 56em) {
   .subhero__textbox h2 {
     font-size: 2.1rem;
   }
@@ -646,6 +687,10 @@ section {
 
 .creation:nth-of-type(1) {
   background-image: var(--gradient1), url("../img/mobile/image-deep-earth.jpg");
+}
+
+.creation:nth-of-type(1) {
+  background-image: url("../img/mobile/image-deep-earth.jpg");
 }
 
 .creation:nth-of-type(2) {
