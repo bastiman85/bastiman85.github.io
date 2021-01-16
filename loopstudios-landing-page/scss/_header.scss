@@ -47,12 +47,13 @@
 
 .hero__content-box {
    border: 2px solid white;
-   padding: 1.3em 1.3em 0.5em;
+   padding: 1.3em 1.3em 0.9em;
    max-width: 350px;
    position: relative;
    z-index: 2;
    @media (min-width: 56em) {
       margin: 6rem 0;
       max-width: 500px;
+      padding: 1.3em 1.3em 0.5em;
    }
 }
