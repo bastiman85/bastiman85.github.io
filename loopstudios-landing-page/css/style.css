@@ -334,6 +334,9 @@ a[target=_blank]::after {
     padding-bottom: 2em;
   }
 }
+.hero .hero__headline {
+  font-size: 3.8em;
+}
 .hero .container {
   width: 100%;
   margin: auto 2rem;
@@ -347,19 +350,20 @@ a[target=_blank]::after {
 @media (min-width: 56em) {
   .hero {
     background-image: url("../img/desktop/image-hero.jpg");
+    background-size: 80%;
   }
 }
 
 .hero__content-box {
   border: 2px solid white;
   padding: 1.3em;
-  max-width: 350px;
+  max-width: 500px;
   position: relative;
   z-index: 2;
 }
 @media (min-width: 56em) {
   .hero__content-box {
-    margin: 3em 0;
+    margin: 6rem 0;
   }
 }
 
@@ -412,6 +416,7 @@ a[target=_blank]::after {
     gap: 0 1em;
     font-family: var(--ff-base);
     font-weight: var(--fw-base);
+    margin-top: 5.5em;
   }
 }
 .hero .nav-list a {
@@ -427,7 +432,7 @@ a[target=_blank]::after {
 @media (min-width: 56em) {
   .hero .logo {
     position: static;
-    margin: 2em 0 1em;
+    margin: 4em 0 1em;
   }
 }
 
@@ -518,6 +523,7 @@ h3 {
   font-family: var(--ff-accent);
   text-transform: uppercase;
   line-height: 1.1;
+  font-weight: var(--fw-accent);
 }
 
 a[class] {
@@ -668,7 +674,7 @@ section {
 @media (min-width: 56em) {
   .creations {
     grid-column: 1/-1;
-    grid-template-rows: repeat(2, 26rem);
+    grid-template-rows: repeat(2, 22rem);
   }
 }
 

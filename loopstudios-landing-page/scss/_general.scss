@@ -15,6 +15,7 @@ h3 {
    font-family: var(--ff-accent);
    text-transform: uppercase;
    line-height: 1.1;
+   font-weight: var(--fw-accent);
 }
 
 a[class] {
@@ -151,7 +152,7 @@ section {
 
    @media (min-width: 56em) {
       grid-column: 1 / -1;
-      grid-template-rows: repeat(2, 26rem);
+      grid-template-rows: repeat(2, 22rem);
    }
 }
 
