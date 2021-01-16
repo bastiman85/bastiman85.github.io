@@ -63,7 +63,7 @@
 
    @media (min-width: 56em) {
       position: static;
-      margin: 1em 0;
+      margin: 2em 0 1em;
    }
 }
 
@@ -92,6 +92,7 @@
       animation-direction: alternate;
       animation-timing-function: ease-in-out;
       animation-fill-mode: forwards;
+      z-index: 3;
    }
 
    .hero .nav {

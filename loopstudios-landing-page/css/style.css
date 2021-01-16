@@ -355,6 +355,7 @@ a[target=_blank]::after {
   padding: 1.3em;
   max-width: 350px;
   position: relative;
+  z-index: 2;
 }
 @media (min-width: 56em) {
   .hero__content-box {
@@ -428,7 +429,7 @@ a[target=_blank]::after {
 @media (min-width: 56em) {
   .hero .logo {
     position: static;
-    margin: 1em 0;
+    margin: 2em 0 1em;
   }
 }
 
@@ -461,6 +462,7 @@ a[target=_blank]::after {
     animation-direction: alternate;
     animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;
+    z-index: 3;
   }
 
   .hero .nav {
@@ -821,8 +823,9 @@ footer .social {
   display: flex;
   justify-content: center;
   margin: 1em 0;
-  grid-gap: 1em;
-  gap: 1em;
+}
+footer .social > * + * {
+  margin-left: 1em;
 }
 footer .copyright {
   font-size: 0.7em;
