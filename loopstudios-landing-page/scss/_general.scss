@@ -40,17 +40,19 @@ nav a,
 }
 
 nav a:after,
-nav a:after,
-.social a:after,
 .social a:after {
    content: "";
    display: block;
    margin-inline: auto;
-   // margin-top: 0.5rem;
+   margin-top: 0.5rem;
    height: 2px;
    width: 0px;
    background-color: transparent;
    transition: width 250ms ease;
+}
+
+.hero nav a:after {
+   margin-top: 0;
 
    @media (min-width: 56em) {
       margin-top: 0.5rem;
