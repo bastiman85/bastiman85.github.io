@@ -16,3 +16,12 @@ close.addEventListener("click", () => {
       nav.classList.add("nav");
    }, 250);
 });
+
+const button = document.querySelector(".btn");
+const creations = document.querySelectorAll(".creation.hide");
+button.addEventListener("click", () => {
+   for (i = 0; i < creations.length; i++) {
+      creations[i].classList.remove("hide");
+   }
+   button.classList.add("hide");
+});
