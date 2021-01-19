@@ -194,7 +194,7 @@ section {
 
 .creation {
    padding-top: 2em;
-   background-size: 100%;
+   background-size: cover;
    background-repeat: no-repeat;
    background-position: center center;
    font-family: var(--ff-accent);
@@ -218,7 +218,6 @@ section {
    &:hover,
    &:focus {
       color: var(--clr-300);
-      background-size: 110%;
    }
 }
 
