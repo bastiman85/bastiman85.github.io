@@ -194,7 +194,7 @@ section {
 
 .creation {
    padding-top: 2em;
-   background-size: 100%;
+   background-size: auto 100%;
    background-repeat: no-repeat;
    background-position: center center;
    font-family: var(--ff-accent);
@@ -219,7 +219,7 @@ section {
       // --gradient1: linear-gradient(180deg, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.7) 100%);
       // --gradient2: linear-gradient(180deg, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.7) 100%);
       color: var(--clr-300);
-      background-size: 110%;
+      background-size: auto 110%;
    }
 }
 
