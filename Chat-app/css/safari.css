@@ -1,8 +1,7 @@
 @media not all and (min-resolution: 0.001dpcm) {
    @supports (-webkit-appearance: none) {
-      .row > * {
-         margin-left: 4rem;
-         margin-right: 4rem;
+      .main-content {
+         margin-left: 8rem;
       }
       @media (max-width: 67em) {
          .row > * {
