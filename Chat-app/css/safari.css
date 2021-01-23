@@ -1,0 +1,27 @@
+@media not all and (min-resolution: 0.001dpcm) {
+   @supports (-webkit-appearance: none) {
+      .row > * {
+         margin-left: 4rem;
+         margin-right: 4rem;
+      }
+      @media (max-width: 67em) {
+         .row > * {
+            margin-top: 4rem;
+            margin-bottom: 4rem;
+            margin-left: auto;
+            margin-right: auto;
+         }
+      }
+      .phone {
+         width: 17.83rem;
+      }
+
+      .chat-message.media {
+         max-width: 80%;
+      }
+      .chat-message.bg-gradient {
+         margin-top: 1em;
+         margin-bottom: 1em;
+      }
+   }
+}
